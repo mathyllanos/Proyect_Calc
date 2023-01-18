@@ -23,4 +23,7 @@
     <string name="BtnMultiplicar">x</string>
     <string name="BtnEliminarTodo">AC</string>
     <string name="BtnCambiarSimbolo">+/-</string>
+
+    <string name="aux"></string>
+
 </resources>
