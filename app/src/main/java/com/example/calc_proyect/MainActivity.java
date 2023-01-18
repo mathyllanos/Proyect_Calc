@@ -10,10 +10,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    double in1 = 0;
-    double i2 = 0;
+    double in1 = 0,i2=0;
     double operacion=0;
-    String operador="",result="";
+    String operador="",aux="";
     TextView edittext1, viewcalc;
     boolean Add, Sub, Multiply, Divide, Remainder, deci;
     Button button_0, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9,
@@ -52,64 +51,142 @@ public class MainActivity extends AppCompatActivity {
         button_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "0");
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "0");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "0");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "1");
-                in1=Double.parseDouble((String) edittext1.getText());
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "1");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "1");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }
+
             }
         });
         button_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "2");
-                in1=Double.parseDouble((String) edittext1.getText());
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "2");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "2");
+                    in1 = Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "3");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
                 edittext1.setText(edittext1.getText() + "3");
                 in1=Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "4");
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "4");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "4");
+                    in1 = Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "5");
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "5");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "5");
+                    in1 = Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "6");
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "6");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "6");
+                    in1 = Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "7");
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "7");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "7");
+                    in1 = Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "8");
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "8");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "8");
+                    in1 = Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         button_9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                edittext1.setText(edittext1.getText() + "9");
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") ||aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "9");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
+                    edittext1.setText(edittext1.getText() + "9");
+                    in1 = Double.parseDouble((String) edittext1.getText());
+                }
             }
         });
         //Botones de operaciones =================================================================================================
@@ -129,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 viewcalc.setText(edittext1.getText() + " -");
                 edittext1.setText("");
+                i2=in1;
                 operador="-";
             }
         });
@@ -137,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 viewcalc.setText(edittext1.getText() + " x");
                 edittext1.setText("");
+                i2=in1;
                 operador="x";
             }
         });
@@ -146,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 viewcalc.setText(edittext1.getText() + " /");
                 edittext1.setText("");
+                i2=in1;
                 operador="/";
             }
         });
@@ -155,6 +235,8 @@ public class MainActivity extends AppCompatActivity {
                 edittext1.setText("0");
                 viewcalc.setText("");
                 operador="";
+                in1=0;
+                i2=0;
             }
         });
 
@@ -164,27 +246,26 @@ public class MainActivity extends AppCompatActivity {
                 switch (operador){
                     case "+":
                         operacion = in1 + i2 ;
-                        result=String.valueOf(operacion);
-                        edittext1.setText(result);
+                        edittext1.setText(operacion+"");
                         operador="";
                         break;
                     case "-":
                         operacion= in1 - i2 ;
-                        edittext1.setText(" kk");
+                        edittext1.setText(operacion+"");
                         operador="";
                         break;
                     case "x":
                         operacion= in1 * i2;
-                        edittext1.setText(in1 * i2+"");
+                        edittext1.setText(operacion+"");
                         operador="";
                         break;
                     case "/":
                         operacion= in1 / i2;
-                        edittext1.setText(in1 / i2+"");
+                        edittext1.setText(operacion+"");
                         operador="";
                         break;
                     case "":
-                        edittext1.setText("hey");
+                        edittext1.setText("0");
                         break;
                 }
             }
