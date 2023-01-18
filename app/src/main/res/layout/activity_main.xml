@@ -6,13 +6,344 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="393dp"
+        android:layout_height="509dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="491dp"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/BtnAux"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                tools:text="@string/Btn0" />
+
+            <Button
+                android:id="@+id/BtnCambiarSimbolo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnCambiarSimbolo"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/BtnEliminarTodo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnEliminarTodo"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/BtnDividir"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnDividir"
+                android:background="@drawable/boton_operador"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Btn7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn7"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/Btn8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn8"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/Btn9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn9"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/BtnMulti"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnMultiplicar"
+                android:background="@drawable/boton_operador"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/Btn4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Btn4"
+                android:background="@drawable/boton_redondo"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/Btn5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn5"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/Btn6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn6"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/BtnResta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnRestar"
+                android:background="@drawable/boton_operador"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/Btn1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/Btn1"
+                android:background="@drawable/boton_redondo"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/Btn2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn2"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/Btn3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn3"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/BtnSumar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnSumar"
+                android:background="@drawable/boton_operador"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/BtnPunto"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnPunto"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/Btn0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/Btn0"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/BtnEliminar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnEliminar"
+                android:background="@drawable/boton_redondo"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/BtnIgual"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:text="@string/BtnIgual"
+                android:background="@drawable/boton_operador"
+                android:textAlignment="center"
+                android:textSize="34sp" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/TexViewResultado"
+        android:layout_width="414dp"
+        android:layout_height="108dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

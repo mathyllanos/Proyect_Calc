@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+    <!--Colores Tema Claro -->
+    <color name="CalcuBlack">#232222</color>
+    <color name="CalcuBotones">#494747</color>
+    <color name="CalcuOperadores">#FF7D1A</color>
+
+    <!--Colores Tema Oscuro -->
 </resources>
