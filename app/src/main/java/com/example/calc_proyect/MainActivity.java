@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     double in1 = 0,i2=0;
@@ -16,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
     TextView edittext1, viewcalc;
     boolean Add, Sub, Multiply, Divide, Remainder, deci;
     Button button_0, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9,
-            button_Add, button_Sub, button_Mul, button_Div, button_Equ, button_Del, button_Dot, button_Remainder;
+            button_Add, button_Sub, button_Mul, button_Div, button_Equ, button_Del, button_Dot, button_Remainder,
+            button_change, button_deleteone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +46,11 @@ public class MainActivity extends AppCompatActivity {
         button_Remainder = (Button) findViewById(R.id.BtnEliminarTodo);
         button_Del = (Button) findViewById(R.id.BtnEliminar);
         button_Equ = (Button) findViewById(R.id.BtnIgual);
+        button_change=(Button) findViewById(R.id.BtnCambiarSimbolo);
 
         edittext1 = (TextView) findViewById(R.id.TexViewResultado);
         viewcalc =(TextView) findViewById(R.id.TextViewVistaCalculo);
+        button_deleteone =(Button) findViewById(R.id.BtnEliminar);
 
         //Acción de los botones ============================================================================================
         button_0.setOnClickListener(new View.OnClickListener() {
@@ -283,16 +288,29 @@ public class MainActivity extends AppCompatActivity {
         button_Dot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (deci) {
-
-                } else {
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0") || aux.contentEquals("") ) {
+                    edittext1.setText("");
+                    edittext1.setText(edittext1.getText() + "0.");
+                    in1=Double.parseDouble((String) edittext1.getText());
+                }else {
                     edittext1.setText(edittext1.getText() + ".");
-                    deci = true;
+                    in1 = Double.parseDouble((String) edittext1.getText());
                 }
-
             }
         });
 
+        button_deleteone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                aux= String.valueOf(edittext1.getText());
+                if (aux.contentEquals("0")){
+                    edittext1.setText("0");
+                }else{
+                   char[] DeleteOne = new char[Integer.parseInt(aux)];
+                }
+            }
+        });
 
     }
 }
