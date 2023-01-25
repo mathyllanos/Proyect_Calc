@@ -2,11 +2,19 @@ package com.example.calc_proyect;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     TextView edittext1, viewcalc;
     boolean Add, Sub, Multiply, Divide, Remainder, deci;
     Button button_0, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9,
-            button_Add, button_Sub, button_Mul, button_Div, button_Equ, button_Del, button_Dot, button_Remainder;
+            button_Add, button_Sub, button_Mul, button_Div, button_Equ, button_Del, button_Dot, button_Remainder, button_history;
+    List<String> operaciones;
+    List<String> resultados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         button_Remainder = (Button) findViewById(R.id.BtnEliminarTodo);
         button_Del = (Button) findViewById(R.id.BtnEliminar);
         button_Equ = (Button) findViewById(R.id.BtnIgual);
+
+        button_history = findViewById(R.id.historialBoton);
 
         edittext1 = (TextView) findViewById(R.id.TexViewResultado);
         viewcalc =(TextView) findViewById(R.id.TextViewVistaCalculo);
@@ -165,6 +177,8 @@ public class MainActivity extends AppCompatActivity {
                     case "+":
                         operacion = in1 + i2 ;
                         result=String.valueOf(operacion);
+                        resultados.add(result);
+                        operaciones.add("123 + 123");
                         edittext1.setText(result);
                         operador="";
                         break;
@@ -212,6 +226,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        button_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
 
+    }
+
+    private void showDialog() {
+        final Dialog dialog = new Dialog(this);
+        CustomAdapter customAdapter = new CustomAdapter(this, operaciones, resultados);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.history);
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 }
